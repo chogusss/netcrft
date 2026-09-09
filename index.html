@@ -1,0 +1,3490 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NetCrft.id — Digital Agency & Web Design Studio Indonesia</title>
+  <meta name="description" content="NetCrft.id adalah digital agency & web design studio Indonesia. Kami membangun website premium yang menghasilkan — landing page, e-commerce, dan custom web app.">
+  <meta name="keywords" content="web design, digital agency, landing page, e-commerce, custom web app, Indonesia, Jakarta">
+  <meta name="author" content="NetCrft.id">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="NetCrft.id — Digital Agency & Web Design Studio">
+  <meta property="og:description" content="Digital agency & web design studio untuk bisnis Anda yang ingin tampil beda dan tumbuh online.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="id_ID">
+  <link rel="canonical" href="https://netcrft.id">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com">
+
+  <!-- Google Fonts: Space Grotesk + Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "NetCrft.id",
+    "description": "Digital agency & web design studio Indonesia",
+    "url": "https://netcrft.id",
+    "email": "hello@netcrft.id",
+    "telephone": "+62 812-3456-7890",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jakarta Selatan",
+      "addressCountry": "ID"
+    },
+    "priceRange": "Rp 1.5jt - 10jt+",
+    "serviceType": ["Web Design", "E-Commerce", "Custom Web Application"]
+  }
+  </script>
+
+  <style>
+    /* ============================================================
+       NetCrft.id — Neo Brutalism Stylesheet v3.0
+       Design System: Neo Brutalism · Space Grotesk + Inter · Light
+       ============================================================ */
+
+    /* ============================================================
+       DESIGN TOKENS — Neo Brutalism Palette
+       ============================================================ */
+    :root {
+      --font-display: 'Space Grotesk', sans-serif;
+      --font-body: 'Inter', sans-serif;
+
+      /* Neo Brutalism Colors */
+      --nb-bg:          #FFFDF5;
+      --nb-bg-alt:      #FFF8E7;
+      --nb-surface:     #FFFFFF;
+      --nb-ink:         #1A1A1A;
+      --nb-ink-muted:   #4A4A4A;
+      --nb-ink-subtle:  #7A7A7A;
+
+      --nb-primary:     #6C5CE7;
+      --nb-primary-light: #A29BFE;
+      --nb-accent-cyan: #00D2FF;
+      --nb-accent-yellow: #FFEAA7;
+      --nb-accent-coral: #FF6B6B;
+      --nb-accent-mint:  #55E6C1;
+      --nb-accent-pink:  #FD79A8;
+      --nb-accent-orange: #FDCB6E;
+      --nb-accent-lime:  #C4F582;
+      --nb-accent-indigo:#5B4BFF;
+      --nb-accent-teal:  #2ED573;
+      --nb-accent-red:   #E84118;
+      --nb-accent-blue:  #1E90FF;
+      --nb-accent-cream: #FFF1C1;
+      --nb-accent-lavender:#D9B8FF;
+      --nb-accent-peach: #FFC8B0;
+
+      --nb-bg-purple: #F3F0FF;
+      --nb-bg-cyan:   #E0FFFE;
+      --nb-bg-yellow: #FFF8D9;
+      --nb-bg-coral:  #FFE0E6;
+      --nb-bg-mint:   #D5F5E3;
+      --nb-bg-pink:   #FFE8F1;
+      --nb-bg-lime:   #E8FFD0;
+      --nb-bg-orange: #FFE8CC;
+      --nb-bg-lavender:#EFE3FF;
+      --nb-bg-peach:  #FFF0E4;
+
+      --nb-border:      #1A1A1A;
+      --nb-border-w:    3px;
+
+      /* Hard Shadows */
+      --shadow-sm:    4px 4px 0 #1A1A1A;
+      --shadow-md:    6px 6px 0 #1A1A1A;
+      --shadow-lg:    8px 8px 0 #1A1A1A;
+      --shadow-xl:    12px 12px 0 #1A1A1A;
+      --shadow-primary: 6px 6px 0 var(--nb-primary);
+      --shadow-cyan:    6px 6px 0 var(--nb-accent-cyan);
+      --shadow-coral:   6px 6px 0 var(--nb-accent-coral);
+      --shadow-mint:    6px 6px 0 var(--nb-accent-mint);
+      --shadow-yellow:  6px 6px 0 var(--nb-accent-yellow);
+      --shadow-pink:    6px 6px 0 var(--nb-accent-pink);
+
+      --section-padding: 7rem 0;
+      --container-max:   1240px;
+      --container-pad:   clamp(1.25rem, 4vw, 2.5rem);
+
+      --radius-sm:  6px;
+      --radius-md:  10px;
+      --radius-lg:  14px;
+      --radius-xl:  18px;
+
+      --z-dropdown: 100;
+      --z-sticky:   200;
+      --z-modal-bg: 400;
+      --z-modal:    500;
+      --z-toast:    600;
+      --z-tooltip:  700;
+
+      --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* ============================================================
+       RESET & BASE
+       ============================================================ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background-color: var(--nb-bg);
+      color: var(--nb-ink);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; font-family: inherit; }
+    ul { list-style: none; }
+
+    /* ============================================================
+       UTILITIES
+       ============================================================ */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+    }
+
+    .section {
+      padding: var(--section-padding);
+    }
+
+    .text-accent {
+      color: var(--nb-primary);
+      position: relative;
+    }
+
+    .text-cyan {
+      color: var(--nb-accent-cyan);
+    }
+
+    .visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--nb-ink);
+      background: var(--nb-accent-yellow);
+      border: 2.5px solid var(--nb-border);
+      border-radius: 999px;
+      padding: 0.35rem 1.1rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 3px 3px 0 var(--nb-border);
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-label::before {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--nb-accent-red);
+      border: 1.5px solid var(--nb-border);
+    }
+
+    .section-label::after {
+      content: '';
+      width: 8px; height: 8px;
+      border-radius: 2px;
+      background: var(--nb-primary);
+      border: 1.5px solid var(--nb-border);
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
+      margin-bottom: 1.25rem;
+      color: var(--nb-ink);
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title .accent-word {
+      position: relative;
+      display: inline-block;
+      padding: 0 0.1em;
+      z-index: 0;
+    }
+
+    .section-title .accent-word::before {
+      content: '';
+      position: absolute;
+      left: -0.08em; right: -0.08em;
+      bottom: 0.08em;
+      height: 0.55em;
+      background: var(--nb-accent-yellow);
+      border-radius: 4px;
+      z-index: -1;
+      transform: skewX(-4deg);
+      border: 2px solid var(--nb-border);
+    }
+
+    .section-body {
+      color: var(--nb-ink-muted);
+      font-size: clamp(0.95rem, 1.5vw, 1.075rem);
+      line-height: 1.85;
+      max-width: 58ch;
+    }
+
+    /* Active nav highlight */
+    .active-nav { 
+      color: var(--nb-primary) !important; 
+      background: rgba(108, 92, 231, 0.08) !important;
+    }
+
+    /* ============================================================
+       NAVBAR — Neo Brutalism
+       ============================================================ */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: var(--z-sticky);
+      padding: 1rem 0;
+      background: var(--nb-surface);
+      border-bottom: 3px solid var(--nb-border);
+      transition: padding 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .navbar.scrolled {
+      padding: 0.7rem 0;
+      box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+    }
+
+    .navbar .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .navbar-brand {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-mark {
+      display: inline-grid;
+      place-items: center;
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      background: var(--nb-primary);
+      border: 2.5px solid var(--nb-border);
+      box-shadow: 3px 3px 0 var(--nb-border);
+      flex-shrink: 0;
+      transition: var(--transition);
+    }
+
+    .brand-mark:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0 var(--nb-border);
+    }
+
+    .brand-mark svg {
+      width: 14px; height: 14px;
+      fill: white;
+    }
+
+    .brand-id {
+      color: var(--nb-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.15rem;
+    }
+
+    .nav-links a {
+      padding: 0.5rem 0.9rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--nb-ink-muted);
+      transition: var(--transition);
+      border: 2px solid transparent;
+    }
+
+    .nav-links a:hover {
+      color: var(--nb-ink);
+      background: var(--nb-accent-yellow);
+      border-color: var(--nb-border);
+      transform: translate(-1px, -1px);
+      box-shadow: 2px 2px 0 var(--nb-border);
+    }
+
+    .nav-cta {
+      margin-left: 0.5rem;
+      padding: 0.55rem 1.35rem !important;
+      background: var(--nb-primary) !important;
+      color: white !important;
+      border: 2.5px solid var(--nb-border) !important;
+      border-radius: 8px !important;
+      font-weight: 700 !important;
+      font-size: 0.875rem !important;
+      box-shadow: 4px 4px 0 var(--nb-border) !important;
+      transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    .nav-cta:hover {
+      transform: translate(-2px, -2px) !important;
+      box-shadow: 6px 6px 0 var(--nb-border) !important;
+      background: var(--nb-primary) !important;
+    }
+
+    .nav-cta:active {
+      transform: translate(2px, 2px) !important;
+      box-shadow: 0px 0px 0 var(--nb-border) !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      padding: 6px;
+      z-index: calc(var(--z-sticky) + 10);
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2.5px;
+      background: var(--nb-ink);
+      border-radius: 2px;
+      transform-origin: center;
+      transition: var(--transition);
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: translateY(7.5px) rotate(45deg);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: translateY(-7.5px) rotate(-45deg);
+    }
+
+    /* ============================================================
+       HERO SECTION — Neo Brutalism + 3D
+       ============================================================ */
+    .hero {
+      min-height: 100svh;
+      display: grid;
+      place-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 5rem;
+      background: var(--nb-bg);
+    }
+
+    /* Grid pattern background */
+    .hero-mesh {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(26,26,26,0.06) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, rgba(26,26,26,0.06) 1.5px, transparent 1.5px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, black 20%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse 90% 80% at 50% 40%, black 20%, transparent 70%);
+    }
+
+    /* 3D Floating Shapes Container */
+    .hero-3d-shapes {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      perspective: 1200px;
+      overflow: hidden;
+    }
+
+    .floating-shape {
+      position: absolute;
+      border: 3px solid var(--nb-border);
+      transform-style: preserve-3d;
+      --px: 0px;
+      --py: 0px;
+    }
+
+    /* Shape 1: Purple Cube */
+    .shape-cube {
+      width: 80px; height: 80px;
+      background: var(--nb-primary);
+      border-radius: 12px;
+      top: calc(15% + var(--py)); left: calc(8% + var(--px));
+      box-shadow: var(--shadow-md);
+      animation: float3D-1 8s ease-in-out infinite;
+    }
+
+    /* Shape 2: Yellow Circle */
+    .shape-circle {
+      width: 60px; height: 60px;
+      background: var(--nb-accent-yellow);
+      border-radius: 50%;
+      top: calc(20% + var(--py)); right: calc(12% + var(--px));
+      box-shadow: var(--shadow-md);
+      animation: float3D-2 10s ease-in-out infinite;
+    }
+
+    /* Shape 3: Coral Triangle (using clip-path) */
+    .shape-triangle {
+      width: 70px; height: 70px;
+      background: var(--nb-accent-coral);
+      border: none;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      bottom: calc(22% - var(--py)); left: calc(12% + var(--px));
+      filter: drop-shadow(4px 4px 0 #1A1A1A);
+      animation: float3D-3 9s ease-in-out infinite;
+    }
+
+    /* Shape 4: Mint Diamond */
+    .shape-diamond {
+      width: 55px; height: 55px;
+      background: var(--nb-accent-mint);
+      border-radius: 8px;
+      bottom: calc(30% - var(--py)); right: calc(8% + var(--px));
+      box-shadow: var(--shadow-md);
+      animation: float3D-4 11s ease-in-out infinite;
+      transform: rotate(45deg);
+    }
+
+    /* Shape 5: Cyan Cross */
+    .shape-cross {
+      width: 50px; height: 50px;
+      background: transparent;
+      border: none;
+      top: calc(55% + var(--py)); left: calc(5% + var(--px));
+      filter: drop-shadow(4px 4px 0 #1A1A1A);
+      animation: float3D-5 7s ease-in-out infinite;
+      position: absolute;
+    }
+
+    .shape-cross::before,
+    .shape-cross::after {
+      content: '';
+      position: absolute;
+      background: var(--nb-accent-cyan);
+      border: 2.5px solid var(--nb-border);
+      border-radius: 4px;
+    }
+
+    .shape-cross::before {
+      width: 100%;
+      height: 16px;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    .shape-cross::after {
+      width: 16px;
+      height: 100%;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* Shape 6: Pink donut */
+    .shape-donut {
+      width: 65px; height: 65px;
+      background: transparent;
+      border: 8px solid var(--nb-accent-pink);
+      border-radius: 50%;
+      top: calc(60% + var(--py)); right: calc(6% + var(--px));
+      filter: drop-shadow(3px 3px 0 #1A1A1A);
+      animation: float3D-6 12s ease-in-out infinite;
+    }
+
+    /* Shape 7: Orange pill */
+    .shape-pill {
+      width: 90px; height: 35px;
+      background: var(--nb-accent-orange);
+      border-radius: 999px;
+      top: calc(35% + var(--py)); right: calc(18% + var(--px));
+      box-shadow: var(--shadow-sm);
+      animation: float3D-7 8.5s ease-in-out infinite;
+    }
+
+    /* Shape 8: Small purple-light square */
+    .shape-sq-sm {
+      width: 35px; height: 35px;
+      background: var(--nb-primary-light);
+      border-radius: 6px;
+      bottom: calc(18% - var(--py)); left: calc(25% + var(--px));
+      box-shadow: 3px 3px 0 var(--nb-border);
+      animation: float3D-8 6s ease-in-out infinite;
+    }
+
+    @keyframes float3D-1 {
+      0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg) rotateZ(0deg); }
+      25%      { transform: translateY(-20px) rotateX(15deg) rotateY(10deg) rotateZ(5deg); }
+      50%      { transform: translateY(-35px) rotateX(0deg) rotateY(20deg) rotateZ(-5deg); }
+      75%      { transform: translateY(-15px) rotateX(-10deg) rotateY(5deg) rotateZ(3deg); }
+    }
+
+    @keyframes float3D-2 {
+      0%, 100% { transform: translateY(0) rotateZ(0deg) scale(1); }
+      33%      { transform: translateY(-28px) rotateZ(15deg) scale(1.08); }
+      66%      { transform: translateY(-12px) rotateZ(-10deg) scale(0.95); }
+    }
+
+    @keyframes float3D-3 {
+      0%, 100% { transform: translateY(0) rotateZ(0deg); }
+      25%      { transform: translateY(-18px) rotateZ(10deg); }
+      50%      { transform: translateY(-30px) rotateZ(-5deg); }
+      75%      { transform: translateY(-10px) rotateZ(15deg); }
+    }
+
+    @keyframes float3D-4 {
+      0%, 100% { transform: rotate(45deg) translateY(0) scale(1); }
+      50%      { transform: rotate(45deg) translateY(-25px) scale(1.1); }
+    }
+
+    @keyframes float3D-5 {
+      0%, 100% { transform: translateY(0) rotateY(0deg); }
+      50%      { transform: translateY(-22px) rotateY(180deg); }
+    }
+
+    @keyframes float3D-6 {
+      0%, 100% { transform: translateY(0) rotateX(0deg) rotateZ(0deg); }
+      33%      { transform: translateY(-18px) rotateX(25deg) rotateZ(10deg); }
+      66%      { transform: translateY(-30px) rotateX(-15deg) rotateZ(-5deg); }
+    }
+
+    @keyframes float3D-7 {
+      0%, 100% { transform: translateY(0) rotateZ(0deg); }
+      50%      { transform: translateY(-20px) rotateZ(12deg); }
+    }
+
+    @keyframes float3D-8 {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50%      { transform: translateY(-15px) rotate(90deg); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      width: 100%;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 var(--container-pad);
+    }
+
+    .hero-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      background: var(--nb-accent-yellow);
+      border: 2.5px solid var(--nb-border);
+      box-shadow: 3px 3px 0 var(--nb-border);
+      font-family: var(--font-display);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--nb-ink);
+      margin-bottom: 2rem;
+      animation: enterDown3D 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .kicker-pulse {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--nb-accent-coral);
+      border: 1.5px solid var(--nb-border);
+      animation: pulseGlow 2s ease-in-out infinite;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%      { opacity: 0.6; transform: scale(1.3); }
+    }
+
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 7.5vw, 5.6rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      text-wrap: balance;
+      margin-bottom: 1.75rem;
+      animation: enterUp3D 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+    }
+
+    .hero-headline mark {
+      background: none;
+      color: var(--nb-primary);
+      font-style: normal;
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero-headline mark::after {
+      content: '';
+      position: absolute;
+      bottom: 0.05em;
+      left: -0.05em;
+      right: -0.05em;
+      height: 0.25em;
+      background: var(--nb-accent-yellow);
+      border: 2px solid var(--nb-border);
+      border-radius: 4px;
+      z-index: -1;
+      transform: rotate(-1deg);
+    }
+
+    .hero-sub {
+      color: var(--nb-ink-muted);
+      font-size: clamp(1.05rem, 2vw, 1.2rem);
+      line-height: 1.85;
+      max-width: 52ch;
+      margin: 0 auto 2.75rem;
+      text-wrap: pretty;
+      animation: enterUp3D 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: enterUp3D 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.3s both;
+    }
+
+    /* ============================================================
+       BUTTONS — Neo Brutalism 3D Press
+       ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 2.2rem;
+      border-radius: 10px;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      border: 3px solid var(--nb-border);
+      outline: none;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--nb-primary);
+      color: white;
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-primary:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 9px 9px 0 var(--nb-border);
+    }
+
+    .btn-primary:active {
+      transform: translate(3px, 3px);
+      box-shadow: 0px 0px 0 var(--nb-border);
+    }
+
+    .btn-ghost {
+      background: var(--nb-surface);
+      color: var(--nb-ink);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-ghost:hover {
+      background: var(--nb-accent-yellow);
+      transform: translate(-3px, -3px);
+      box-shadow: 9px 9px 0 var(--nb-border);
+    }
+
+    .btn-ghost:active {
+      transform: translate(3px, 3px);
+      box-shadow: 0px 0px 0 var(--nb-border);
+    }
+
+    .btn-icon {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    /* ============================================================
+       HERO METRICS — Neo Brutalism
+       ============================================================ */
+    .hero-metrics {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 4rem;
+      animation: enterUp3D 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+    }
+
+    .metric {
+      text-align: center;
+      background: var(--nb-surface);
+      border: 2.5px solid var(--nb-border);
+      border-radius: var(--radius-md);
+      padding: 1.25rem 1.75rem;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+
+    .metric:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .metric {
+      --mt-accent: var(--nb-primary);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 5px;
+      background: var(--mt-accent);
+      border-bottom: 2px solid var(--nb-border);
+    }
+
+    .metric::after {
+      content: '';
+      position: absolute;
+      bottom: 0.8rem; right: 0.8rem;
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      background: var(--mt-accent);
+      border: 2px solid var(--nb-border);
+      opacity: 0.55;
+    }
+
+    .metric:nth-child(1) { background: var(--nb-bg-purple);   --mt-accent: var(--nb-primary); }
+    .metric:nth-child(2) { background: var(--nb-bg-cyan);     --mt-accent: var(--nb-accent-teal); }
+    .metric:nth-child(3) { background: var(--nb-bg-yellow);   --mt-accent: var(--nb-accent-orange); }
+    .metric:nth-child(4) { background: var(--nb-bg-pink);     --mt-accent: var(--nb-accent-coral); }
+
+    .metric-value {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--nb-ink);
+      line-height: 1;
+      margin-bottom: 0.3rem;
+    }
+
+    .metric-value span {
+      color: var(--nb-primary);
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--nb-ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .metric-divider {
+      display: none;
+    }
+
+    /* ============================================================
+       TRUST STRIP — Neo Brutalism
+       ============================================================ */
+    .trust-strip {
+      padding: 3rem 0;
+      border-top: 3px solid var(--nb-border);
+      border-bottom: 3px solid var(--nb-border);
+      overflow: hidden;
+      position: relative;
+      background:
+        repeating-linear-gradient(
+          90deg,
+          var(--nb-accent-yellow) 0,
+          var(--nb-accent-yellow) 160px,
+          var(--nb-bg-pink) 160px,
+          var(--nb-bg-pink) 320px,
+          var(--nb-bg-cyan) 320px,
+          var(--nb-bg-cyan) 480px,
+          var(--nb-bg-lime) 480px,
+          var(--nb-bg-lime) 640px,
+          var(--nb-bg-purple) 640px,
+          var(--nb-bg-purple) 800px
+        );
+    }
+
+    .trust-strip::before,
+    .trust-strip::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 5rem;
+      z-index: 2;
+      pointer-events: none;
+    }
+
+    .trust-strip::before {
+      left: 0;
+      background: linear-gradient(to right, var(--nb-bg-yellow), transparent);
+      box-shadow: inset 4px 0 0 var(--nb-accent-orange), inset 8px 0 0 var(--nb-border);
+    }
+
+    .trust-strip::after {
+      right: 0;
+      background: linear-gradient(to left, var(--nb-bg-purple), transparent);
+      box-shadow: inset -4px 0 0 var(--nb-primary), inset -8px 0 0 var(--nb-border);
+    }
+
+    .trust-label {
+      text-align: center;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--nb-ink);
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      padding: 0.35rem 1.2rem;
+      background: var(--nb-surface);
+      border: 2.5px solid var(--nb-border);
+      border-radius: 999px;
+      box-shadow: 4px 4px 0 var(--nb-border);
+    }
+
+    .trust-label::before {
+      content: '✨';
+      margin-right: 0.5rem;
+    }
+    .trust-label::after {
+      content: '✨';
+      margin-left: 0.5rem;
+    }
+
+    .trust-track {
+      display: flex;
+      gap: 3rem;
+      animation: scrollLeft 28s linear infinite;
+      width: max-content;
+    }
+
+    .trust-track:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes scrollLeft {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      white-space: nowrap;
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--nb-ink);
+      transition: var(--transition);
+      flex-shrink: 0;
+      padding: 0.4rem 0.9rem;
+      background: var(--nb-surface);
+      border: 2.5px solid var(--nb-border);
+      border-radius: 10px;
+      box-shadow: 3px 3px 0 var(--nb-border);
+    }
+
+    .trust-item:nth-child(5n+1) { background: var(--nb-bg-yellow); }
+    .trust-item:nth-child(5n+2) { background: var(--nb-bg-pink); }
+    .trust-item:nth-child(5n+3) { background: var(--nb-bg-cyan); }
+    .trust-item:nth-child(5n+4) { background: var(--nb-bg-lime); }
+    .trust-item:nth-child(5n+5) { background: var(--nb-bg-purple); }
+
+    .trust-item:hover {
+      transform: translate(-2px, -2px) scale(1.05);
+      box-shadow: 5px 5px 0 var(--nb-border);
+    }
+
+    .trust-dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--nb-accent-coral);
+      border: 2px solid var(--nb-border);
+      flex-shrink: 0;
+    }
+    .trust-item:nth-child(5n+1) .trust-dot { background: var(--nb-primary); }
+    .trust-item:nth-child(5n+2) .trust-dot { background: var(--nb-accent-teal); }
+    .trust-item:nth-child(5n+3) .trust-dot { background: var(--nb-accent-orange); }
+    .trust-item:nth-child(5n+4) .trust-dot { background: var(--nb-accent-cyan); }
+    .trust-item:nth-child(5n+5) .trust-dot { background: var(--nb-accent-red); }
+
+    /* ============================================================
+       SERVICES SECTION — Neo Brutalism
+       ============================================================ */
+    .services {
+      background: var(--nb-bg-alt);
+      position: relative;
+    }
+
+    .services::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--nb-primary) 0px,
+        var(--nb-primary) 20px,
+        var(--nb-accent-cyan) 20px,
+        var(--nb-accent-cyan) 40px,
+        var(--nb-accent-coral) 40px,
+        var(--nb-accent-coral) 60px,
+        var(--nb-accent-mint) 60px,
+        var(--nb-accent-mint) 80px
+      );
+    }
+
+    .services-head {
+      max-width: 600px;
+      margin-bottom: 4.5rem;
+    }
+
+    .services-layout {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.75rem;
+    }
+
+    .svc-card {
+      background: var(--nb-surface);
+      border: 3px solid var(--nb-border);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem 2rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-md);
+      /* 3D tilt */
+      transform-style: preserve-3d;
+    }
+
+    .svc-card:hover {
+      transform: translate(-4px, -4px);
+      box-shadow: 10px 10px 0 var(--nb-border);
+    }
+
+    .svc-card:nth-child(1) {
+      --card-accent: var(--nb-primary);
+      --card-bg: var(--nb-bg-purple);
+      --card-icon-bg: var(--nb-bg-purple);
+      --card-price-bg: var(--nb-accent-lavender);
+      --card-feature-bg: var(--nb-accent-mint);
+      --card-sticker: "🎯";
+    }
+    .svc-card:nth-child(2) {
+      --card-accent: var(--nb-accent-cyan);
+      --card-bg: var(--nb-bg-cyan);
+      --card-icon-bg: var(--nb-bg-cyan);
+      --card-price-bg: var(--nb-accent-yellow);
+      --card-feature-bg: var(--nb-accent-lime);
+      --card-sticker: "🛍️";
+    }
+    .svc-card:nth-child(3) {
+      --card-accent: var(--nb-accent-coral);
+      --card-bg: var(--nb-bg-peach);
+      --card-icon-bg: var(--nb-bg-orange);
+      --card-price-bg: var(--nb-accent-peach);
+      --card-feature-bg: var(--nb-accent-cyan);
+      --card-sticker: "⚡";
+    }
+
+    .svc-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--card-accent) 0px,
+        var(--card-accent) 14px,
+        var(--nb-border) 14px,
+        var(--nb-border) 20px,
+        var(--nb-accent-yellow) 20px,
+        var(--nb-accent-yellow) 34px,
+        var(--nb-border) 34px,
+        var(--nb-border) 40px
+      );
+    }
+
+    .svc-card::after {
+      content: var(--card-sticker);
+      position: absolute;
+      top: 1.1rem;
+      right: 1.1rem;
+      width: 40px; height: 40px;
+      display: grid;
+      place-items: center;
+      background: var(--card-bg);
+      border: 2.5px solid var(--nb-border);
+      border-radius: 10px;
+      font-size: 1.1rem;
+      box-shadow: 3px 3px 0 var(--nb-border);
+      z-index: 2;
+      transform: rotate(8deg);
+    }
+
+    .svc-icon-wrap {
+      width: 60px; height: 60px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.7rem;
+      position: relative;
+      z-index: 1;
+      border: 3px solid var(--nb-border);
+      box-shadow: 4px 4px 0 var(--nb-border);
+      background: var(--card-icon-bg);
+    }
+
+    .svc-icon-1, .svc-icon-2, .svc-icon-3 { background: var(--card-icon-bg); }
+
+    .svc-type {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--nb-ink-subtle);
+      margin-bottom: 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .svc-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
+      position: relative;
+      z-index: 1;
+      color: var(--nb-ink);
+    }
+
+    .svc-desc {
+      color: var(--nb-ink-muted);
+      font-size: 0.875rem;
+      line-height: 1.8;
+      margin-bottom: 1.75rem;
+      position: relative;
+      z-index: 1;
+      flex: 1;
+    }
+
+    .svc-features {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .svc-features li {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: 0.85rem;
+      color: var(--nb-ink-muted);
+    }
+
+    .svc-features li::before {
+      content: '✓';
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px; height: 22px;
+      border-radius: 6px;
+      background: var(--card-feature-bg);
+      border: 2px solid var(--nb-border);
+      font-size: 0.7rem;
+      font-weight: 800;
+      color: var(--nb-ink);
+      flex-shrink: 0;
+      box-shadow: 2px 2px 0 var(--nb-border);
+    }
+
+    .svc-price {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 1;
+      color: var(--nb-ink);
+      background: var(--card-price-bg);
+      display: inline-block;
+      padding: 0.35rem 0.9rem;
+      border: 2.5px solid var(--nb-border);
+      border-radius: 8px;
+      margin-top: auto;
+      box-shadow: 3px 3px 0 var(--nb-border);
+    }
+
+    .svc-price sub {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--nb-ink-muted);
+      vertical-align: baseline;
+    }
+
+    /* ============================================================
+       PORTFOLIO SECTION — Neo Brutalism
+       ============================================================ */
+    .portfolio {
+      background: var(--nb-bg);
+    }
+
+    .portfolio-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .portfolio-head-text {
+      max-width: 520px;
+    }
+
+    .portfolio-filters {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .filter-btn {
+      padding: 0.55rem 1.25rem;
+      border-radius: 10px;
+      border: 2.5px solid var(--nb-border);
+      background: var(--nb-surface);
+      color: var(--nb-ink-muted);
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      box-shadow: 3px 3px 0 var(--nb-border);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      position: relative;
+    }
+
+    .filter-btn::before {
+      content: '';
+      position: absolute;
+      top: 3px; right: 3px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      border: 1.5px solid var(--nb-border);
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+
+    .filter-btn:nth-child(1) { --fb-accent: var(--nb-primary);      --fb-bg: var(--nb-bg-purple); }
+    .filter-btn:nth-child(2) { --fb-accent: var(--nb-accent-cyan);  --fb-bg: var(--nb-bg-cyan); }
+    .filter-btn:nth-child(3) { --fb-accent: var(--nb-accent-teal);  --fb-bg: var(--nb-bg-lime); }
+    .filter-btn:nth-child(4) { --fb-accent: var(--nb-accent-red);   --fb-bg: var(--nb-bg-peach); }
+
+    .filter-btn:hover {
+      background: var(--fb-bg);
+      color: var(--nb-ink);
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0 var(--nb-border);
+    }
+
+    .filter-btn:hover::before {
+      opacity: 1;
+      background: var(--fb-accent);
+    }
+
+    .filter-btn.active {
+      background: var(--fb-accent);
+      color: white;
+      transform: translate(1px, 1px);
+      box-shadow: 2px 2px 0 var(--nb-border);
+    }
+
+    .filter-btn.active::before {
+      opacity: 1;
+      background: white;
+    }
+
+    .portfolio-grid,
+    .demo-portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 1.75rem;
+    }
+
+    .demo-portfolio-grid {
+      margin-top: 2rem;
+    }
+
+    .portfolio-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      background: var(--nb-surface);
+      border: 3px solid var(--nb-border);
+      box-shadow: var(--shadow-md);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    .portfolio-card:hover {
+      transform: translate(-4px, -4px);
+      box-shadow: 10px 10px 0 var(--nb-border);
+    }
+
+    .portfolio-img-wrap {
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 16 / 10;
+      border-bottom: 3px solid var(--nb-border);
+    }
+
+    .portfolio-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .portfolio-card:hover .portfolio-img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(26, 26, 26, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .portfolio-card:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-overlay-btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.6rem;
+      border-radius: 8px;
+      background: var(--nb-accent-yellow);
+      color: var(--nb-ink);
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 700;
+      border: 2.5px solid var(--nb-border);
+      box-shadow: 3px 3px 0 var(--nb-border);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .portfolio-overlay-btn:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0 var(--nb-border);
+    }
+
+    .portfolio-overlay-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 0 var(--nb-border);
+    }
+
+    .portfolio-placeholder {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--nb-ink-muted);
+    }
+
+    .portfolio-card {
+      --pf-accent: var(--nb-primary);
+      --pf-bg: var(--nb-bg-purple);
+      --pf-tag-bg: var(--nb-bg-yellow);
+      --pf-sticker-color: var(--nb-accent-yellow);
+    }
+    .portfolio-card[data-category="ecommerce"] {
+      --pf-accent: var(--nb-accent-teal);
+      --pf-bg: var(--nb-bg-cyan);
+      --pf-tag-bg: var(--nb-bg-lime);
+      --pf-sticker-color: var(--nb-accent-mint);
+    }
+    .portfolio-card[data-category="custom"] {
+      --pf-accent: var(--nb-accent-red);
+      --pf-bg: var(--nb-bg-peach);
+      --pf-tag-bg: var(--nb-bg-lavender);
+      --pf-sticker-color: var(--nb-accent-pink);
+    }
+    .portfolio-card[data-category="landing"] {
+      --pf-accent: var(--nb-primary);
+      --pf-bg: var(--nb-bg-purple);
+      --pf-tag-bg: var(--nb-bg-yellow);
+      --pf-sticker-color: var(--nb-accent-orange);
+    }
+
+    .portfolio-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--pf-accent) 0, var(--pf-accent) 12px,
+        var(--nb-border) 12px, var(--nb-border) 18px,
+        var(--pf-sticker-color) 18px, var(--pf-sticker-color) 30px,
+        var(--nb-border) 30px, var(--nb-border) 36px
+      );
+      z-index: 3;
+    }
+
+    .portfolio-card::after {
+      content: '';
+      position: absolute;
+      top: 0.9rem; right: 0.9rem;
+      width: 28px; height: 28px;
+      background: var(--pf-sticker-color);
+      border: 2.5px solid var(--nb-border);
+      border-radius: 50%;
+      z-index: 4;
+      box-shadow: 2px 2px 0 var(--nb-border);
+    }
+
+    .portfolio-card:nth-child(1) .portfolio-placeholder { background: var(--nb-bg-cyan); }
+    .portfolio-card:nth-child(2) .portfolio-placeholder { background: var(--nb-bg-purple); }
+    .portfolio-card:nth-child(3) .portfolio-placeholder { background: var(--nb-bg-peach); }
+    .portfolio-card:nth-child(4) .portfolio-placeholder { background: var(--nb-bg-pink); }
+    .portfolio-card:nth-child(5) .portfolio-placeholder { background: var(--nb-bg-lime); }
+
+    .portfolio-placeholder {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .portfolio-placeholder::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(26,26,26,0.05) 0, transparent 40%);
+      pointer-events: none;
+    }
+
+    .portfolio-placeholder-icon {
+      font-size: 2.8rem;
+      filter: drop-shadow(3px 3px 0 rgba(0,0,0,0.12));
+    }
+
+    .portfolio-body {
+      padding: 1.5rem 1.75rem;
+      position: relative;
+    }
+
+    .portfolio-body::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 4px;
+      background: var(--pf-accent);
+      border-top: 2px solid var(--nb-border);
+    }
+
+    .portfolio-badge {
+      display: inline-block;
+      padding: 0.3rem 0.85rem;
+      border-radius: 8px;
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+      border: 2.5px solid var(--nb-border);
+      box-shadow: 2.5px 2.5px 0 var(--nb-border);
+    }
+
+    .badge-landing   { background: var(--nb-bg-purple);   color: var(--nb-primary);      }
+    .badge-ecommerce { background: var(--nb-bg-mint);     color: #0e8f5b;                 }
+    .badge-custom    { background: var(--nb-bg-peach);    color: var(--nb-accent-red);    }
+
+    .portfolio-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.4rem;
+      color: var(--nb-ink);
+    }
+
+    .portfolio-desc {
+      color: var(--nb-ink-muted);
+      font-size: 0.82rem;
+      line-height: 1.7;
+    }
+
+    .portfolio-tech-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 0.85rem;
+    }
+
+    .portfolio-tech-tag {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25rem 0.7rem;
+      border-radius: 6px;
+      background: var(--pf-tag-bg);
+      color: var(--nb-ink);
+      border: 2px solid var(--nb-border);
+      box-shadow: 1.5px 1.5px 0 var(--nb-border);
+    }
+
+    /* ============================================================
+       PROCESS SECTION — Neo Brutalism
+       ============================================================ */
+    .process {
+      background: var(--nb-bg-alt);
+      position: relative;
+    }
+
+    .process::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--nb-accent-mint) 0px,
+        var(--nb-accent-mint) 20px,
+        var(--nb-primary) 20px,
+        var(--nb-primary) 40px,
+        var(--nb-accent-yellow) 40px,
+        var(--nb-accent-yellow) 60px,
+        var(--nb-accent-coral) 60px,
+        var(--nb-accent-coral) 80px
+      );
+    }
+
+    .process-head {
+      text-align: center;
+      max-width: 580px;
+      margin: 0 auto 5rem;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      position: relative;
+    }
+
+    .process-steps::before {
+      content: '';
+      position: absolute;
+      top: 32px;
+      left: calc(12.5% + 32px);
+      right: calc(12.5% + 32px);
+      height: 3px;
+      background: var(--nb-border);
+      border-radius: 2px;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+
+    .process-num {
+      width: 64px; height: 64px;
+      border-radius: 12px;
+      background: var(--nb-surface);
+      border: 3px solid var(--nb-border);
+      display: grid;
+      place-items: center;
+      margin: 0 auto 1.5rem;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--nb-ink);
+      position: relative;
+      z-index: 1;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      /* 3D flip prep */
+      transform-style: preserve-3d;
+    }
+
+    .process-step {
+      --ps-accent: var(--nb-primary);
+      --ps-bg: var(--nb-bg-purple);
+    }
+    .process-step:nth-child(1) { --ps-accent: var(--nb-primary);      --ps-bg: var(--nb-bg-purple); }
+    .process-step:nth-child(2) { --ps-accent: var(--nb-accent-cyan);  --ps-bg: var(--nb-bg-cyan); }
+    .process-step:nth-child(3) { --ps-accent: var(--nb-accent-orange);--ps-bg: var(--nb-bg-yellow); }
+    .process-step:nth-child(4) { --ps-accent: var(--nb-accent-teal);  --ps-bg: var(--nb-bg-mint); }
+
+    .process-step::before {
+      content: '';
+      position: absolute;
+      top: -0.4rem;
+      left: 50%;
+      transform: translateX(-50%) rotate(-12deg);
+      width: 56px; height: 14px;
+      background: var(--ps-accent);
+      border: 2px solid var(--nb-border);
+      border-radius: 4px;
+      z-index: 0;
+    }
+
+    .process-num {
+      position: relative;
+    }
+
+    .process-step:nth-child(1) .process-num {
+      background: var(--nb-bg-purple);
+      color: var(--nb-primary);
+      border-color: var(--nb-primary);
+      box-shadow: 4px 4px 0 var(--nb-primary), 4px 4px 0 0 var(--nb-border);
+    }
+    .process-step:nth-child(2) .process-num {
+      background: var(--nb-bg-cyan);
+      color: #008fa8;
+      border-color: var(--nb-accent-cyan);
+      box-shadow: 4px 4px 0 var(--nb-accent-cyan), 4px 4px 0 0 var(--nb-border);
+    }
+    .process-step:nth-child(3) .process-num {
+      background: var(--nb-bg-yellow);
+      color: #b37a00;
+      border-color: var(--nb-accent-orange);
+      box-shadow: 4px 4px 0 var(--nb-accent-orange), 4px 4px 0 0 var(--nb-border);
+    }
+    .process-step:nth-child(4) .process-num {
+      background: var(--nb-bg-mint);
+      color: #0e8f5b;
+      border-color: var(--nb-accent-teal);
+      box-shadow: 4px 4px 0 var(--nb-accent-teal), 4px 4px 0 0 var(--nb-border);
+    }
+
+    .process-step:hover .process-num {
+      transform: translate(-3px, -3px) rotateY(15deg) scale(1.04);
+      box-shadow: 8px 8px 0 var(--ps-accent), 8px 8px 0 0 var(--nb-border) !important;
+      background: var(--ps-bg);
+    }
+
+    .process-step-title {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: var(--nb-ink);
+      position: relative;
+      display: inline-block;
+    }
+
+    .process-step-title::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: -4px; right: -4px;
+      height: 8px;
+      background: var(--ps-accent);
+      opacity: 0.35;
+      z-index: -1;
+      border-radius: 3px;
+      transform: skewX(-8deg);
+    }
+
+    .process-step-desc {
+      font-size: 0.85rem;
+      color: var(--nb-ink-muted);
+      line-height: 1.75;
+    }
+
+    /* ============================================================
+       CONTACT SECTION — Neo Brutalism
+       ============================================================ */
+    .contact {
+      background: var(--nb-bg);
+      position: relative;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-info > .section-label { display: block; }
+
+    .contact-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.5vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      text-wrap: balance;
+      margin-bottom: 1.25rem;
+      color: var(--nb-ink);
+    }
+
+    .contact-lead {
+      color: var(--nb-ink-muted);
+      line-height: 1.85;
+      margin-bottom: 2.5rem;
+      max-width: 42ch;
+    }
+
+    .contact-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .channel-card {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.1rem 1.4rem;
+      border-radius: var(--radius-md);
+      background: var(--nb-surface);
+      border: 2.5px solid var(--nb-border);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .channel-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 5px; height: 100%;
+      background: var(--ch-accent);
+      border-right: 2px solid var(--nb-border);
+    }
+
+    .channel-card:nth-child(1) { --ch-accent: var(--nb-accent-coral); background: var(--nb-bg-pink); }
+    .channel-card:nth-child(2) { --ch-accent: var(--nb-accent-teal);  background: var(--nb-bg-mint); }
+    .channel-card:nth-child(3) { --ch-accent: var(--nb-primary);     background: var(--nb-bg-purple); }
+
+    .channel-card:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 7px 7px 0 var(--nb-border);
+    }
+
+    .channel-icon {
+      width: 46px; height: 46px;
+      border-radius: 12px;
+      background: var(--ch-accent);
+      border: 2.5px solid var(--nb-border);
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+      color: white;
+      box-shadow: 3px 3px 0 var(--nb-border);
+    }
+
+    .channel-label {
+      font-family: var(--font-display);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--nb-ink-subtle);
+      margin-bottom: 0.1rem;
+    }
+
+    .channel-value {
+      font-weight: 700;
+      font-size: 0.925rem;
+      color: var(--nb-ink);
+    }
+
+    .form-card {
+      background: var(--nb-surface);
+      border: 3px solid var(--nb-border);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 4vw, 3rem);
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+
+    .form-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 6px;
+      background: var(--nb-primary);
+      border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+    }
+
+    .form-card-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.4rem;
+      color: var(--nb-ink);
+    }
+
+    .form-card-sub {
+      color: var(--nb-ink-muted);
+      font-size: 0.85rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--nb-ink);
+      margin-bottom: 0.45rem;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 0.85rem 1.1rem;
+      background: var(--nb-bg);
+      border: 2.5px solid var(--nb-border);
+      border-radius: 8px;
+      color: var(--nb-ink);
+      font-size: 0.875rem;
+      font-family: var(--font-body);
+      transition: box-shadow 0.2s ease, border-color 0.2s ease;
+      outline: none;
+      -webkit-appearance: none;
+      box-shadow: 2px 2px 0 var(--nb-border);
+    }
+
+    .form-control:focus {
+      border-color: var(--nb-primary);
+      box-shadow: 4px 4px 0 var(--nb-primary);
+      background: #F8F7FF;
+    }
+
+    .form-control::placeholder { color: var(--nb-ink-subtle); }
+
+    select.form-control option {
+      background: var(--nb-surface);
+      color: var(--nb-ink);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-alert {
+      padding: 0.9rem 1.15rem;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      display: none;
+      align-items: center;
+      gap: 0.6rem;
+      border: 2.5px solid var(--nb-border);
+    }
+
+    .form-alert.show { display: flex; }
+
+    .form-alert-success {
+      background: var(--nb-accent-mint);
+      color: var(--nb-ink);
+    }
+
+    .form-alert-error {
+      background: var(--nb-accent-coral);
+      color: white;
+    }
+
+    .spinner {
+      display: inline-block;
+      width: 16px; height: 16px;
+      border: 2.5px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ============================================================
+       FOOTER — Neo Brutalism
+       ============================================================ */
+    .footer {
+      background:
+        linear-gradient(135deg, var(--nb-primary) 0%, var(--nb-accent-indigo) 60%, #4A3BD6 100%);
+      border-top: 4px solid var(--nb-border);
+      padding: 5rem 0 2.5rem;
+      position: relative;
+      color: white;
+      overflow: hidden;
+    }
+
+    .footer::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 8px;
+      background: repeating-linear-gradient(
+        90deg,
+        var(--nb-accent-yellow) 0 20px,
+        var(--nb-border) 20px 26px,
+        var(--nb-accent-cyan) 26px 46px,
+        var(--nb-border) 46px 52px,
+        var(--nb-accent-pink) 52px 72px,
+        var(--nb-border) 72px 78px,
+        var(--nb-accent-mint) 78px 98px,
+        var(--nb-border) 98px 104px
+      );
+      border-bottom: 2px solid var(--nb-border);
+    }
+
+    .footer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 15% 80%, rgba(253,121,168,0.2) 0, transparent 40%),
+        radial-gradient(circle at 85% 20%, rgba(0,210,255,0.18) 0, transparent 40%);
+      pointer-events: none;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-brand-name {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      margin-bottom: 1rem;
+      display: inline-block;
+      padding: 0.2rem 0.6rem;
+      background: rgba(255,255,255,0.1);
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      transform: rotate(-1deg);
+    }
+
+    .footer-brand-desc {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.875rem;
+      line-height: 1.85;
+      max-width: 30ch;
+      margin-bottom: 1.75rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .social-btn {
+      width: 42px; height: 42px;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.12);
+      border: 2.5px solid rgba(255,255,255,0.4);
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 0.95rem;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.2);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+
+    .social-btn:nth-child(1):hover {
+      background: var(--nb-accent-pink);
+      color: var(--nb-ink);
+      border-color: var(--nb-ink);
+      transform: translate(-2px, -2px) rotate(-4deg);
+      box-shadow: 5px 5px 0 rgba(0,0,0,0.25);
+    }
+    .social-btn:nth-child(2):hover {
+      background: var(--nb-accent-mint);
+      color: var(--nb-ink);
+      border-color: var(--nb-ink);
+      transform: translate(-2px, -2px) rotate(3deg);
+      box-shadow: 5px 5px 0 rgba(0,0,0,0.25);
+    }
+    .social-btn:nth-child(3):hover {
+      background: var(--nb-accent-cyan);
+      color: var(--nb-ink);
+      border-color: var(--nb-ink);
+      transform: translate(-2px, -2px) rotate(-2deg);
+      box-shadow: 5px 5px 0 rgba(0,0,0,0.25);
+    }
+
+    .footer-col-title {
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+      margin-bottom: 1.25rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .footer-links a {
+      color: rgba(255,255,255,0.78);
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s ease, padding-left 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--nb-accent-yellow);
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      padding-top: 2rem;
+      border-top: 2px solid rgba(255,255,255,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-copy {
+      color: rgba(255,255,255,0.6);
+      font-size: 0.8rem;
+    }
+
+    .footer-tech {
+      color: rgba(255,255,255,0.5);
+      font-size: 0.78rem;
+    }
+
+    /* ============================================================
+       SCROLL TO TOP — Neo Brutalism
+       ============================================================ */
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 48px; height: 48px;
+      border-radius: 10px;
+      background: var(--nb-accent-yellow);
+      border: 3px solid var(--nb-border);
+      color: var(--nb-ink);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: var(--transition);
+      z-index: var(--z-sticky);
+      font-size: 1.1rem;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-top:hover {
+      transform: translate(-2px, -4px);
+      box-shadow: 6px 6px 0 var(--nb-border);
+      background: var(--nb-primary);
+      color: white;
+    }
+
+    .scroll-top:active {
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 0 var(--nb-border);
+    }
+
+    /* ============================================================
+       PORTFOLIO MODAL — Neo Brutalism
+       ============================================================ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 26, 26, 0.6);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: var(--z-modal-bg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal-box {
+      background: var(--nb-surface);
+      border: 3px solid var(--nb-border);
+      border-radius: var(--radius-lg);
+      max-width: 680px;
+      width: 100%;
+      overflow: hidden;
+      transform: scale(0.9) translateY(20px);
+      transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      z-index: var(--z-modal);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .modal-overlay.open .modal-box {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal-img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-bottom: 3px solid var(--nb-border);
+    }
+
+    .modal-body {
+      padding: 2rem 2.25rem;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      width: 38px; height: 38px;
+      border-radius: 8px;
+      background: var(--nb-accent-coral);
+      border: 2.5px solid var(--nb-border);
+      color: white;
+      font-size: 0.95rem;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      box-shadow: 3px 3px 0 var(--nb-border);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .modal-close:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 5px 5px 0 var(--nb-border);
+    }
+
+    .modal-close:active {
+      transform: translate(2px, 2px);
+      box-shadow: 0px 0px 0 var(--nb-border);
+    }
+
+    /* ============================================================
+       3D ANIMATIONS
+       ============================================================ */
+    @keyframes enterUp3D {
+      from {
+        opacity: 0;
+        transform: perspective(600px) rotateX(8deg) translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: perspective(600px) rotateX(0deg) translateY(0);
+      }
+    }
+
+    @keyframes enterDown3D {
+      from {
+        opacity: 0;
+        transform: perspective(600px) rotateX(-6deg) translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: perspective(600px) rotateX(0deg) translateY(0);
+      }
+    }
+
+    /* 3D Tilt class for cards */
+    .tilt-3d {
+      transform-style: preserve-3d;
+      will-change: transform;
+    }
+
+    .tilt-3d > * {
+      transform: translateZ(20px);
+    }
+
+    /* Stagger decoration */
+    .nb-sticker {
+      position: absolute;
+      font-size: 2rem;
+      z-index: 1;
+      transition: transform 0.3s ease;
+      filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.15));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* ============================================================
+       RESPONSIVE
+       ============================================================ */
+    @media (max-width: 1100px) {
+      .services-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+      .process-steps {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+      }
+      .process-steps::before { display: none; }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+      .contact-lead { max-width: 100%; }
+      .floating-shape { opacity: 0.6; }
+    }
+
+    @media (max-width: 768px) {
+      :root {
+        --section-padding: 5rem 0;
+      }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100svh;
+        width: min(300px, 85vw);
+        background: var(--nb-surface);
+        border-left: 3px solid var(--nb-border);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 6rem 1.75rem 2rem;
+        transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        gap: 0.25rem;
+        z-index: var(--z-sticky);
+        overflow-y: auto;
+        box-shadow: -8px 0 0 var(--nb-border);
+      }
+      .nav-links.open { right: 0; }
+      .nav-links a {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        font-size: 1rem;
+        border-radius: var(--radius-sm);
+      }
+      .nav-cta {
+        margin-left: 0 !important;
+        margin-top: 0.5rem;
+        width: 100%;
+        text-align: center;
+        border-radius: 8px !important;
+      }
+      .hamburger { display: flex; }
+      .hero-metrics { gap: 1rem; }
+      .services-layout { grid-template-columns: 1fr; }
+      .portfolio-head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+      }
+      .portfolio-grid,
+      .demo-portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+      .process-steps {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      .form-row { grid-template-columns: 1fr; }
+      .floating-shape { opacity: 0.4; }
+      .shape-cross, .shape-donut, .shape-pill { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-actions .btn { justify-content: center; }
+      .portfolio-filters { gap: 0.4rem; }
+      .hero-metrics {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .metric { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav id="navbar" class="navbar" role="navigation" aria-label="Navigasi Utama">
+  <div class="container">
+    <a href="#hero" class="navbar-brand" aria-label="NetCrft.id Home">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 2h4v4H2zM8 2h4v2H8zM8 6h4v6H8zM2 8h4v4H2z"/>
+        </svg>
+      </span>
+      Net<span class="brand-id">Crft.id</span>
+    </a>
+
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Layanan</a></li>
+      <li><a href="#portfolio">Portofolio</a></li>
+      <li><a href="#process">Proses</a></li>
+      <li><a href="#contact">Kontak</a></li>
+      <li><a href="#contact" class="nav-cta" id="navCta">Konsultasi Gratis</a></li>
+    </ul>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero" class="hero">
+  <div class="hero-mesh" aria-hidden="true"></div>
+
+  <!-- 3D Floating Shapes -->
+  <div class="hero-3d-shapes" aria-hidden="true">
+    <div class="floating-shape shape-cube"></div>
+    <div class="floating-shape shape-circle"></div>
+    <div class="floating-shape shape-triangle"></div>
+    <div class="floating-shape shape-diamond"></div>
+    <div class="floating-shape shape-cross"></div>
+    <div class="floating-shape shape-donut"></div>
+    <div class="floating-shape shape-pill"></div>
+    <div class="floating-shape shape-sq-sm"></div>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-kicker">
+      <span class="kicker-pulse" aria-hidden="true"></span>
+      Digital Agency · Web Design · Web App
+    </div>
+
+    <h1 class="hero-headline">
+      Kami Bangun Website yang <mark>Menghasilkan</mark>
+    </h1>
+
+    <p class="hero-sub">
+      Digital agency &amp; web design studio untuk bisnis Anda yang ingin tampil beda dan tumbuh online.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#contact" id="cta-konsultasi" class="btn btn-primary btn-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Konsultasi Gratis
+      </a>
+      <a href="#portfolio" class="btn btn-ghost btn-icon">
+        Lihat Portofolio
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+
+    <div class="hero-metrics" role="list">
+      <div class="metric" role="listitem">
+        <div class="metric-value" data-target="120" data-suffix="+">
+          <span id="cnt-proyek">0</span>+
+        </div>
+        <div class="metric-label">Proyek Selesai</div>
+      </div>
+      <div class="metric" role="listitem">
+        <div class="metric-value" data-target="98" data-suffix="%">
+          <span id="cnt-klien">0</span>%
+        </div>
+        <div class="metric-label">Klien Puas</div>
+      </div>
+      <div class="metric" role="listitem">
+        <div class="metric-value">
+          <span id="cnt-tahun">5</span>+ <span style="font-size:1rem">Tahun</span>
+        </div>
+        <div class="metric-label">Pengalaman</div>
+      </div>
+      <div class="metric" role="listitem">
+        <div class="metric-value">
+          24<span style="font-size:1rem; color:var(--nb-ink-subtle)">/7</span>
+        </div>
+        <div class="metric-label">Support</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TRUST STRIP
+     ============================================================ -->
+<div class="trust-strip" aria-label="Klien & Teknologi">
+  <div class="trust-label">Dipercaya oleh bisnis Indonesia</div>
+  <div class="trust-track" aria-hidden="true">
+    <span class="trust-item"><span class="trust-dot"></span>Lumina Fashion</span>
+    <span class="trust-item"><span class="trust-dot"></span>PropertyPrime ID</span>
+    <span class="trust-item"><span class="trust-dot"></span>KirimCepat</span>
+    <span class="trust-item"><span class="trust-dot"></span>Dapur Nusantara</span>
+    <span class="trust-item"><span class="trust-dot"></span>TalentFlow HR</span>
+    <span class="trust-item"><span class="trust-dot"></span>BrandKu Studio</span>
+    <span class="trust-item"><span class="trust-dot"></span>TokoSegar.id</span>
+    <span class="trust-item"><span class="trust-dot"></span>EduNusantara</span>
+    <span class="trust-item"><span class="trust-dot"></span>FinWise App</span>
+    <span class="trust-item"><span class="trust-dot"></span>TravelNesia</span>
+    <!-- Duplicate for infinite scroll -->
+    <span class="trust-item"><span class="trust-dot"></span>Lumina Fashion</span>
+    <span class="trust-item"><span class="trust-dot"></span>PropertyPrime ID</span>
+    <span class="trust-item"><span class="trust-dot"></span>KirimCepat</span>
+    <span class="trust-item"><span class="trust-dot"></span>Dapur Nusantara</span>
+    <span class="trust-item"><span class="trust-dot"></span>TalentFlow HR</span>
+    <span class="trust-item"><span class="trust-dot"></span>BrandKu Studio</span>
+    <span class="trust-item"><span class="trust-dot"></span>TokoSegar.id</span>
+    <span class="trust-item"><span class="trust-dot"></span>EduNusantara</span>
+    <span class="trust-item"><span class="trust-dot"></span>FinWise App</span>
+    <span class="trust-item"><span class="trust-dot"></span>TravelNesia</span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SERVICES SECTION
+     ============================================================ -->
+<section id="services" class="section services">
+  <div class="container">
+    <div class="services-head" data-aos="fade-up">
+      <span class="section-label">✨ Layanan Kami ✨</span>
+      <h2 class="section-title">Solusi Digital <span class="accent-word">Lengkap</span> untuk Bisnis Anda</h2>
+      <p class="section-body">
+        Dari desain yang memukau hingga fungsi yang kuat — kami menawarkan paket layanan yang disesuaikan dengan kebutuhan dan skala bisnis Anda.
+      </p>
+    </div>
+
+    <div class="services-layout">
+      <!-- Landing Page -->
+      <div class="svc-card tilt-3d" data-aos="fade-up" data-aos-delay="80">
+        <div class="svc-icon-wrap svc-icon-1" aria-hidden="true">🚀</div>
+        <div class="svc-type">Landing Page</div>
+        <h3 class="svc-title">Landing Page Premium</h3>
+        <p class="svc-desc">Halaman landas yang dirancang untuk konversi tinggi. Ideal untuk kampanye produk, event, dan personal branding.</p>
+        <ul class="svc-features">
+          <li>Desain responsif mobile-first</li>
+          <li>Animasi UI premium (AOS/GSAP)</li>
+          <li>Integrasi form &amp; WhatsApp CTA</li>
+          <li>Optimasi kecepatan (PageSpeed 90+)</li>
+          <li>SEO On-Page dasar</li>
+        </ul>
+        <div class="svc-price">Mulai Rp 1,5 Jt <sub>/ proyek</sub></div>
+      </div>
+
+      <!-- E-Commerce -->
+      <div class="svc-card tilt-3d" data-aos="fade-up" data-aos-delay="160">
+        <div class="svc-icon-wrap svc-icon-2" aria-hidden="true">🛒</div>
+        <div class="svc-type">E-Commerce</div>
+        <h3 class="svc-title">Toko Online Lengkap</h3>
+        <p class="svc-desc">Platform belanja online full-featured dengan manajemen produk, keranjang, dan payment gateway terintegrasi.</p>
+        <ul class="svc-features">
+          <li>Katalog produk tak terbatas</li>
+          <li>Integrasi Midtrans / Doku</li>
+          <li>Dashboard penjual real-time</li>
+          <li>Manajemen stok otomatis</li>
+          <li>Laporan penjualan &amp; analitik</li>
+        </ul>
+        <div class="svc-price">Mulai Rp 5 Jt <sub>/ proyek</sub></div>
+      </div>
+
+      <!-- Custom App -->
+      <div class="svc-card tilt-3d" data-aos="fade-up" data-aos-delay="240">
+        <div class="svc-icon-wrap svc-icon-3" aria-hidden="true">⚙️</div>
+        <div class="svc-type">Custom Web App</div>
+        <h3 class="svc-title">Aplikasi Web Custom</h3>
+        <p class="svc-desc">Sistem dan aplikasi web yang dibuat khusus sesuai alur kerja bisnis Anda — dari portal internal hingga SaaS.</p>
+        <ul class="svc-features">
+          <li>Requirement analysis mendalam</li>
+          <li>Sistem autentikasi &amp; role management</li>
+          <li>REST API &amp; integrasi pihak ketiga</li>
+          <li>Dashboard analitik interaktif</li>
+          <li>Garansi maintenance 3 bulan</li>
+        </ul>
+        <div class="svc-price">Mulai Rp 10 Jt <sub>/ proyek</sub></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PORTFOLIO SECTION
+     ============================================================ -->
+<section id="portfolio" class="section portfolio">
+  <div class="container">
+    <div class="portfolio-head">
+      <div class="portfolio-head-text" data-aos="fade-up">
+        <span class="section-label">🎨 Portofolio 🎨</span>
+        <h2 class="section-title">Karya <span class="accent-word">Terbaik</span> Kami</h2>
+        <p class="section-body">Setiap proyek adalah bukti komitmen kami terhadap kualitas, estetika, dan performa.</p>
+      </div>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="portfolio-filters" data-aos="fade-up" data-aos-delay="100">
+      <button class="filter-btn active" data-filter="all" id="filterAll">Semua</button>
+      <button class="filter-btn" data-filter="landing" id="filterLanding">Landing Page</button>
+      <button class="filter-btn" data-filter="ecommerce" id="filterEcommerce">E-Commerce</button>
+      <button class="filter-btn" data-filter="custom" id="filterCustom">Custom App</button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="demo-portfolio-grid" id="demoPortfolioGrid">
+      <!-- Card 1: Lumina Fashion Store -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="ecommerce" data-aos="fade-up" data-aos-delay="0">
+        <div class="portfolio-img-wrap">
+          <img src="demo_lumina.png" alt="Lumina Fashion Store" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="Lumina Fashion Store"
+                    data-desc="Platform e-commerce fashion lengkap dengan katalog produk, keranjang belanja, dan integrasi Midtrans untuk brand fashion premium Indonesia."
+                    data-img="demo_lumina.png"
+                    data-url="#"
+                    data-tech="PHP, MySQL, Midtrans"
+                    aria-label="Lihat detail Lumina Fashion Store">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-ecommerce">E-Commerce</span>
+          <h3 class="portfolio-title">Lumina Fashion Store</h3>
+          <p class="portfolio-desc">Platform e-commerce fashion lengkap dengan katalog produk, keranjang belanja, dan integrasi Midtrans untuk brand fashion premium Indonesia.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">PHP</span>
+            <span class="portfolio-tech-tag">MySQL</span>
+            <span class="portfolio-tech-tag">Midtrans</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: PropertyPrime ID -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="landing" data-aos="fade-up" data-aos-delay="90">
+        <div class="portfolio-img-wrap">
+          <img src="demo_property.png" alt="PropertyPrime ID" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="PropertyPrime ID"
+                    data-desc="Landing page premium untuk developer properti — dengan virtual tour, listing interaktif, dan form konsultasi terintegrasi WhatsApp."
+                    data-img="demo_property.png"
+                    data-url="#"
+                    data-tech="WordPress, Elementor Pro, GSAP"
+                    aria-label="Lihat detail PropertyPrime ID">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-landing">Landing Page</span>
+          <h3 class="portfolio-title">PropertyPrime ID</h3>
+          <p class="portfolio-desc">Landing page premium untuk developer properti — dengan virtual tour, listing interaktif, dan form konsultasi terintegrasi WhatsApp.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">WordPress</span>
+            <span class="portfolio-tech-tag">Elementor Pro</span>
+            <span class="portfolio-tech-tag">GSAP</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: KirimCepat Dashboard -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="custom" data-aos="fade-up" data-aos-delay="180">
+        <div class="portfolio-img-wrap">
+          <img src="demo_logistic.png" alt="KirimCepat Dashboard" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="KirimCepat Dashboard"
+                    data-desc="Sistem manajemen logistik real-time dengan tracking pengiriman, laporan analitik, dan API integrasi kurir untuk startup logistik."
+                    data-img="demo_logistic.png"
+                    data-url="#"
+                    data-tech="Laravel, Vue.js, PostgreSQL"
+                    aria-label="Lihat detail KirimCepat Dashboard">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-custom">Custom App</span>
+          <h3 class="portfolio-title">KirimCepat Dashboard</h3>
+          <p class="portfolio-desc">Sistem manajemen logistik real-time dengan tracking pengiriman, laporan analitik, dan API integrasi kurir untuk startup logistik.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">Laravel</span>
+            <span class="portfolio-tech-tag">Vue.js</span>
+            <span class="portfolio-tech-tag">PostgreSQL</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4: Dapur Nusantara -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="landing" data-aos="fade-up" data-aos-delay="0">
+        <div class="portfolio-img-wrap">
+          <img src="demo_culinary.png" alt="Dapur Nusantara" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="Dapur Nusantara"
+                    data-desc="Website brand kuliner premium dengan galeri menu interaktif, sistem reservasi online, dan cerita brand yang memikat."
+                    data-img="demo_culinary.png"
+                    data-url="#"
+                    data-tech="Next.js, Framer Motion, Sanity CMS"
+                    aria-label="Lihat detail Dapur Nusantara">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-landing">Landing Page</span>
+          <h3 class="portfolio-title">Dapur Nusantara</h3>
+          <p class="portfolio-desc">Website brand kuliner premium dengan galeri menu interaktif, sistem reservasi online, dan cerita brand yang memikat.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">Next.js</span>
+            <span class="portfolio-tech-tag">Framer Motion</span>
+            <span class="portfolio-tech-tag">Sanity CMS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 5: TalentFlow HR System -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="custom" data-aos="fade-up" data-aos-delay="90">
+        <div class="portfolio-img-wrap">
+          <img src="demo_saas.png" alt="TalentFlow HR System" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="TalentFlow HR System"
+                    data-desc="Aplikasi HRIS lengkap dengan modul rekrutmen, onboarding, penggajian otomatis, dan laporan kinerja karyawan berbasis web."
+                    data-img="demo_saas.png"
+                    data-url="#"
+                    data-tech="React, Node.js, MongoDB"
+                    aria-label="Lihat detail TalentFlow HR System">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-custom">Custom App</span>
+          <h3 class="portfolio-title">TalentFlow HR System</h3>
+          <p class="portfolio-desc">Aplikasi HRIS lengkap dengan modul rekrutmen, onboarding, penggajian otomatis, dan laporan kinerja karyawan berbasis web.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">React</span>
+            <span class="portfolio-tech-tag">Node.js</span>
+            <span class="portfolio-tech-tag">MongoDB</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 6: BrandKu Studio -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="landing" data-aos="fade-up" data-aos-delay="180">
+        <div class="portfolio-img-wrap">
+          <img src="img_1.png" alt="BrandKu Studio" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="BrandKu Studio"
+                    data-desc="Landing page kreatif untuk agensi branding dengan portofolio interaktif, animasi scroll, dan form lead generation."
+                    data-img="img_1.png"
+                    data-url="#"
+                    data-tech="HTML, CSS, GSAP, Formspree"
+                    aria-label="Lihat detail BrandKu Studio">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-landing">Landing Page</span>
+          <h3 class="portfolio-title">BrandKu Studio</h3>
+          <p class="portfolio-desc">Landing page kreatif untuk agensi branding dengan portofolio interaktif, animasi scroll, dan form lead generation.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">HTML</span>
+            <span class="portfolio-tech-tag">GSAP</span>
+            <span class="portfolio-tech-tag">Formspree</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 7: TokoSegar.id -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="ecommerce" data-aos="fade-up" data-aos-delay="0">
+        <div class="portfolio-img-wrap">
+          <img src="img_2.png" alt="TokoSegar.id" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="TokoSegar.id"
+                    data-desc="Platform e-commerce grosir sembako dengan katalog ribuan produk, sistem reseller, dan pengiriman Same-Day."
+                    data-img="img_2.png"
+                    data-url="#"
+                    data-tech="CodeIgniter, MySQL, RajaOngkir"
+                    aria-label="Lihat detail TokoSegar.id">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-ecommerce">E-Commerce</span>
+          <h3 class="portfolio-title">TokoSegar.id</h3>
+          <p class="portfolio-desc">Platform e-commerce grosir sembako dengan katalog ribuan produk, sistem reseller, dan pengiriman Same-Day.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">CodeIgniter</span>
+            <span class="portfolio-tech-tag">MySQL</span>
+            <span class="portfolio-tech-tag">RajaOngkir</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 8: EduNusantara LMS -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="custom" data-aos="fade-up" data-aos-delay="90">
+        <div class="portfolio-img-wrap">
+          <img src="img_3.png" alt="EduNusantara LMS" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="EduNusantara LMS"
+                    data-desc="Sistem Learning Management System untuk sekolah dan kursus online — video course, kuis, sertifikat, dan laporan progress."
+                    data-img="img_3.png"
+                    data-url="#"
+                    data-tech="Laravel, Vue.js, AWS S3"
+                    aria-label="Lihat detail EduNusantara LMS">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-custom">Custom App</span>
+          <h3 class="portfolio-title">EduNusantara LMS</h3>
+          <p class="portfolio-desc">Sistem Learning Management System untuk sekolah dan kursus online — video course, kuis, sertifikat, dan laporan progress.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">Laravel</span>
+            <span class="portfolio-tech-tag">Vue.js</span>
+            <span class="portfolio-tech-tag">AWS S3</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 9: FinWise App Landing -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="landing" data-aos="fade-up" data-aos-delay="180">
+        <div class="portfolio-img-wrap">
+          <img src="img_4.png" alt="FinWise App Landing" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="FinWise App Landing"
+                    data-desc="Landing page untuk aplikasi finansial personal dengan mockup app animasi, pricing table, dan CTA download Play Store/App Store."
+                    data-img="img_4.png"
+                    data-url="#"
+                    data-tech="Next.js, Tailwind, Framer Motion"
+                    aria-label="Lihat detail FinWise App Landing">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-landing">Landing Page</span>
+          <h3 class="portfolio-title">FinWise App Landing</h3>
+          <p class="portfolio-desc">Landing page untuk aplikasi finansial personal dengan mockup app animasi, pricing table, dan CTA download Play Store/App Store.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">Next.js</span>
+            <span class="portfolio-tech-tag">Tailwind</span>
+            <span class="portfolio-tech-tag">Framer Motion</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 10: TravelNesia Tour -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="ecommerce" data-aos="fade-up" data-aos-delay="0">
+        <div class="portfolio-img-wrap">
+          <img src="img_5.png" alt="TravelNesia Tour" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="TravelNesia Tour"
+                    data-desc="Marketplace paket tour dan travel Indonesia dengan booking online, e-ticket, dan sistem review terverifikasi."
+                    data-img="img_5.png"
+                    data-url="#"
+                    data-tech="WordPress, WooCommerce, Midtrans"
+                    aria-label="Lihat detail TravelNesia Tour">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-ecommerce">E-Commerce</span>
+          <h3 class="portfolio-title">TravelNesia Tour</h3>
+          <p class="portfolio-desc">Marketplace paket tour dan travel Indonesia dengan booking online, e-ticket, dan sistem review terverifikasi.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">WordPress</span>
+            <span class="portfolio-tech-tag">WooCommerce</span>
+            <span class="portfolio-tech-tag">Midtrans</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 11: FinWise Dashboard -->
+      <div class="portfolio-card demo-card tilt-3d" data-category="custom" data-aos="fade-up" data-aos-delay="90">
+        <div class="portfolio-img-wrap">
+          <img src="img_6.png" alt="FinWise Dashboard" loading="lazy">
+          <div class="portfolio-overlay">
+            <button class="portfolio-overlay-btn demo-detail-btn"
+                    data-title="FinWise Dashboard"
+                    data-desc="Dashboard admin untuk FinWise App — manajemen user, transaksi real-time, analisis keuangan, dan sistem notification push."
+                    data-img="img_6.png"
+                    data-url="#"
+                    data-tech="React, Express.js, Firebase"
+                    aria-label="Lihat detail FinWise Dashboard">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              Lihat Detail
+            </button>
+          </div>
+        </div>
+        <div class="portfolio-body">
+          <span class="portfolio-badge badge-custom">Custom App</span>
+          <h3 class="portfolio-title">FinWise Dashboard</h3>
+          <p class="portfolio-desc">Dashboard admin untuk FinWise App — manajemen user, transaksi real-time, analisis keuangan, dan sistem notification push.</p>
+          <div class="portfolio-tech-tags">
+            <span class="portfolio-tech-tag">React</span>
+            <span class="portfolio-tech-tag">Express.js</span>
+            <span class="portfolio-tech-tag">Firebase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROCESS SECTION
+     ============================================================ -->
+<section id="process" class="section process">
+  <div class="container">
+    <div class="process-head" data-aos="fade-up">
+      <span class="section-label">⚙️ Cara Kerja Kami ⚙️</span>
+      <h2 class="section-title">Proses yang <span class="accent-word">Terstruktur</span></h2>
+      <p class="section-body">Kami percaya bahwa hasil terbaik lahir dari proses yang jelas dan komunikasi yang transparan.</p>
+    </div>
+
+    <div class="process-steps">
+      <div class="process-step" data-aos="fade-up" data-aos-delay="80">
+        <div class="process-num">01</div>
+        <h3 class="process-step-title">Diskusi &amp; Brief</h3>
+        <p class="process-step-desc">Konsultasi gratis untuk memahami kebutuhan, tujuan bisnis, dan target audiens Anda secara mendalam.</p>
+      </div>
+      <div class="process-step" data-aos="fade-up" data-aos-delay="160">
+        <div class="process-num">02</div>
+        <h3 class="process-step-title">Desain &amp; Prototype</h3>
+        <p class="process-step-desc">Kami membuat wireframe dan mockup visual yang bisa Anda review dan setujui sebelum pengembangan dimulai.</p>
+      </div>
+      <div class="process-step" data-aos="fade-up" data-aos-delay="240">
+        <div class="process-num">03</div>
+        <h3 class="process-step-title">Development</h3>
+        <p class="process-step-desc">Pengembangan penuh dengan update progres rutin. Anda bisa memantau dan memberikan feedback di setiap tahap.</p>
+      </div>
+      <div class="process-step" data-aos="fade-up" data-aos-delay="320">
+        <div class="process-num">04</div>
+        <h3 class="process-step-title">Launch &amp; Support</h3>
+        <p class="process-step-desc">Peluncuran dengan QA menyeluruh, pelatihan penggunaan, dan dukungan purna jual hingga 3 bulan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT SECTION
+     ============================================================ -->
+<section id="contact" class="section contact">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Left: Info -->
+      <div class="contact-info" data-aos="fade-right">
+        <span class="section-label">Hubungi Kami</span>
+        <h2 class="contact-title">
+          Siap Mewujudkan<br><span class="text-accent">Proyek Anda?</span>
+        </h2>
+        <p class="contact-lead">
+          Ceritakan kebutuhan proyek Anda kepada kami. Tim NetCrft.id siap memberikan konsultasi gratis dan estimasi harga tanpa kewajiban apapun.
+        </p>
+
+        <div class="contact-channels">
+          <div class="channel-card">
+            <div class="channel-icon" aria-hidden="true">📧</div>
+            <div>
+              <div class="channel-label">Email</div>
+              <div class="channel-value">hello@netcrft.id</div>
+            </div>
+          </div>
+          <div class="channel-card">
+            <div class="channel-icon" aria-hidden="true">💬</div>
+            <div>
+              <div class="channel-label">WhatsApp / Telepon</div>
+              <div class="channel-value">+62 812-3456-7890</div>
+            </div>
+          </div>
+          <div class="channel-card">
+            <div class="channel-icon" aria-hidden="true">📍</div>
+            <div>
+              <div class="channel-label">Lokasi</div>
+              <div class="channel-value">Jakarta Selatan, Indonesia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div data-aos="fade-left" data-aos-delay="100">
+        <div class="form-card">
+          <h3 class="form-card-title">Kirim Pesan</h3>
+          <p class="form-card-sub">Kami biasanya membalas dalam 1×24 jam kerja.</p>
+
+          <div id="formAlertSuccess" class="form-alert form-alert-success" role="alert" aria-live="polite"></div>
+          <div id="formAlertError"   class="form-alert form-alert-error"   role="alert" aria-live="polite"></div>
+
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="inputName">Nama Lengkap *</label>
+                <input type="text" id="inputName" name="name"
+                       class="form-control" placeholder="Budi Santoso"
+                       required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="inputEmail">Email *</label>
+                <input type="email" id="inputEmail" name="email"
+                       class="form-control" placeholder="budi@email.com"
+                       required autocomplete="email">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="inputPhone">Nomor HP / WA</label>
+                <input type="tel" id="inputPhone" name="phone"
+                       class="form-control" placeholder="+62 812-xxxx-xxxx"
+                       autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="inputService">Layanan yang Diminati</label>
+                <select id="inputService" name="service_interest" class="form-control">
+                  <option value="">-- Pilih Layanan --</option>
+                  <option value="Landing Page">Landing Page Premium</option>
+                  <option value="E-Commerce">Toko Online / E-Commerce</option>
+                  <option value="Custom Web App">Custom Web Application</option>
+                  <option value="Konsultasi">Konsultasi / Diskusi Dulu</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="inputMessage">Ceritakan Proyek Anda *</label>
+              <textarea id="inputMessage" name="message" class="form-control"
+                        placeholder="Halo NetCrft, saya ingin membuat website untuk..." required></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:0.25rem;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Kirim Pesan
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">
+          Net<span style="color:var(--nb-accent-yellow)">Crft.id</span>
+        </div>
+        <p class="footer-brand-desc">
+          Digital agency &amp; web design studio yang berfokus pada hasil nyata — website yang tidak hanya indah, tapi juga convert dan perform.
+        </p>
+        <div class="footer-social" aria-label="Media sosial">
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Layanan</div>
+        <ul class="footer-links">
+          <li><a href="#services">Landing Page Premium</a></li>
+          <li><a href="#services">E-Commerce</a></li>
+          <li><a href="#services">Custom Web App</a></li>
+          <li><a href="#contact">Konsultasi Gratis</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Perusahaan</div>
+        <ul class="footer-links">
+          <li><a href="#portfolio">Portofolio</a></li>
+          <li><a href="#process">Cara Kerja</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">Teknologi</div>
+        <ul class="footer-links">
+          <li><a href="#services">PHP &amp; Laravel</a></li>
+          <li><a href="#services">React / Next.js</a></li>
+          <li><a href="#services">WordPress</a></li>
+          <li><a href="#services">MySQL &amp; PostgreSQL</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        © 2026 NetCrft.id — All rights reserved. Dibuat dengan ❤️ di Indonesia.
+      </div>
+      <div class="footer-tech">
+        Powered by HTML &amp; CSS
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Scroll to Top -->
+<button id="scrollTopBtn" class="scroll-top" aria-label="Kembali ke atas" title="Scroll ke atas">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ============================================================
+     PORTFOLIO MODAL
+     ============================================================ -->
+<div id="portfolioModal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Detail Portofolio">
+  <div class="modal-box">
+    <button id="modalClose" class="modal-close" aria-label="Tutup modal">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <img id="modalImg" src="" alt="" class="modal-img" loading="lazy" style="display:none;">
+    <div class="modal-body">
+      <h3 id="modalTitle" style="font-family:var(--font-display);font-size:1.35rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:.6rem;"></h3>
+      <p id="modalDesc" style="color:var(--nb-ink-muted);line-height:1.8;margin-bottom:.75rem;font-size:.9rem;"></p>
+      <p id="modalTech" style="font-size:.78rem;color:var(--nb-ink-subtle);margin-bottom:1.5rem;font-weight:600;"></p>
+      <a id="modalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="display:none;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        Kunjungi Website
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<!-- Main JS (inline) -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+
+  // ============================================================
+  // AOS Init
+  // ============================================================
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 700,
+      easing: 'ease-out-quart',
+      once: true,
+      offset: 60,
+    });
+  }
+
+  // ============================================================
+  // Navbar scroll behavior
+  // ============================================================
+  const navbar = document.getElementById('navbar');
+  if (navbar) {
+    const onScroll = () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
+  // ============================================================
+  // Mobile hamburger menu
+  // ============================================================
+  const hamburger = document.getElementById('hamburger');
+  const navLinks  = document.getElementById('navLinks');
+
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navbar.contains(e.target)) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // ============================================================
+  // Scroll to Top Button
+  // ============================================================
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  if (scrollTopBtn) {
+    window.addEventListener('scroll', () => {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 450);
+    }, { passive: true });
+
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ============================================================
+  // Counter animation — hero metrics
+  // ============================================================
+  function animateCounter(el, target) {
+    const duration = 1600;
+    let startTime = null;
+
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 4);
+      el.textContent = Math.floor(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  const cntProyek = document.getElementById('cnt-proyek');
+  const cntKlien  = document.getElementById('cnt-klien');
+
+  const metricsObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        if (cntProyek) animateCounter(cntProyek, 120);
+        if (cntKlien)  animateCounter(cntKlien, 98);
+        metricsObs.disconnect();
+      }
+    });
+  }, { threshold: 0.5 });
+
+  const heroMetrics = document.querySelector('.hero-metrics');
+  if (heroMetrics) metricsObs.observe(heroMetrics);
+
+  // ============================================================
+  // Portfolio Filter
+  // ============================================================
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const allCards   = document.querySelectorAll(
+    '.portfolio-card[data-category], .demo-card[data-category]'
+  );
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+
+      allCards.forEach(card => {
+        const show = filter === 'all' || card.dataset.category === filter;
+        card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+
+        if (show) {
+          card.style.display = '';
+          card.offsetHeight;
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(10px)';
+          setTimeout(() => { card.style.display = 'none'; }, 310);
+        }
+      });
+    });
+  });
+
+  // ============================================================
+  // Portfolio Modal
+  // ============================================================
+  const modalOverlay = document.getElementById('portfolioModal');
+  const modalImg     = document.getElementById('modalImg');
+  const modalTitle   = document.getElementById('modalTitle');
+  const modalDesc    = document.getElementById('modalDesc');
+  const modalTech    = document.getElementById('modalTech');
+  const modalLink    = document.getElementById('modalLink');
+  const modalClose   = document.getElementById('modalClose');
+
+  function openModal({ img, title, desc, url, tech }) {
+    if (modalImg) {
+      if (img) {
+        modalImg.src = img;
+        modalImg.alt = title;
+        modalImg.style.display = '';
+      } else {
+        modalImg.style.display = 'none';
+      }
+    }
+    if (modalTitle) modalTitle.textContent = title;
+    if (modalDesc)  modalDesc.textContent = desc;
+    if (modalTech && tech) modalTech.textContent = 'Teknologi: ' + tech;
+    if (modalLink) {
+      modalLink.href = url;
+      modalLink.style.display = (url && url !== '#') ? 'inline-flex' : 'none';
+    }
+    if (modalOverlay) {
+      modalOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      modalClose?.focus();
+    }
+  }
+
+  function closeModal() {
+    if (modalOverlay) {
+      modalOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Demo portfolio cards
+  document.querySelectorAll('.demo-detail-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      openModal({
+        img:   btn.dataset.img   || '',
+        title: btn.dataset.title || '',
+        desc:  btn.dataset.desc  || '',
+        url:   btn.dataset.url   || '#',
+        tech:  btn.dataset.tech  || '',
+      });
+    });
+  });
+
+  if (modalClose)   modalClose.addEventListener('click', closeModal);
+  if (modalOverlay) {
+    modalOverlay.addEventListener('click', (e) => {
+      if (e.target === modalOverlay) closeModal();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  // ============================================================
+  // Contact Form — Client-side only (no PHP backend)
+  // ============================================================
+  const contactForm  = document.getElementById('contactForm');
+  const formAlertOk  = document.getElementById('formAlertSuccess');
+  const formAlertErr = document.getElementById('formAlertError');
+  const submitBtn    = document.getElementById('submitBtn');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name    = contactForm.querySelector('#inputName');
+      const email   = contactForm.querySelector('#inputEmail');
+      const message = contactForm.querySelector('#inputMessage');
+
+      let valid = true;
+      [name, email, message].forEach(field => {
+        if (!field?.value.trim()) {
+          field.style.borderColor = 'var(--nb-accent-coral)';
+          field.style.boxShadow = '4px 4px 0 var(--nb-accent-coral)';
+          valid = false;
+          setTimeout(() => { 
+            field.style.borderColor = ''; 
+            field.style.boxShadow = '';
+          }, 2800);
+        }
+      });
+
+      if (!valid) {
+        showAlert(formAlertErr, '⚠ Mohon lengkapi semua field yang wajib diisi.');
+        return;
+      }
+
+      if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)) {
+        email.style.borderColor = 'var(--nb-accent-coral)';
+        email.style.boxShadow = '4px 4px 0 var(--nb-accent-coral)';
+        showAlert(formAlertErr, '⚠ Format email tidak valid.');
+        setTimeout(() => { 
+          email.style.borderColor = ''; 
+          email.style.boxShadow = '';
+        }, 2800);
+        return;
+      }
+
+      // Simulate success (no backend)
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span class="spinner"></span> Mengirim...';
+      }
+
+      hideAlerts();
+
+      setTimeout(() => {
+        showAlert(formAlertOk, '✓ Pesan berhasil dikirim! Kami akan segera menghubungi Anda.');
+        contactForm.reset();
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Kirim Pesan';
+        }
+      }, 1200);
+    });
+  }
+
+  function showAlert(el, msg) {
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.add('show');
+    setTimeout(() => el.classList.remove('show'), 7000);
+  }
+
+  function hideAlerts() {
+    [formAlertOk, formAlertErr].forEach(el => el?.classList.remove('show'));
+  }
+
+  // ============================================================
+  // Active nav link highlight on scroll
+  // ============================================================
+  const sections   = document.querySelectorAll('section[id]');
+  const navAnchors = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  if (sections.length && navAnchors.length) {
+    const navObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navAnchors.forEach(a => {
+            a.classList.toggle('active-nav', a.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+
+    sections.forEach(s => navObserver.observe(s));
+  }
+
+  // ============================================================
+  // 3D Tilt Effect on Cards
+  // ============================================================
+  const tiltCards = document.querySelectorAll('.tilt-3d');
+
+  tiltCards.forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const centerX = rect.width / 2;
+      const centerY = rect.height / 2;
+      const rotateX = (y - centerY) / centerY * -8;
+      const rotateY = (x - centerX) / centerX * 8;
+
+      const shadowX = 8 + (rotateY * 0.6);
+      const shadowY = 8 + (rotateX * -0.6);
+
+      card.style.transform = `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translate(-2px, -2px)`;
+      card.style.boxShadow = `${shadowX}px ${shadowY}px 0 #1A1A1A`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = '';
+      card.style.boxShadow = '';
+    });
+  });
+
+  // ============================================================
+  // Parallax Scroll Depth for Floating Shapes
+  // ============================================================
+  const shapes = document.querySelectorAll('.floating-shape');
+
+  if (shapes.length) {
+    let ticking = false;
+
+    function updateParallax() {
+      const scrollY = window.scrollY;
+      shapes.forEach((shape, i) => {
+        const speedY = 0.015 + (i * 0.012);
+        const speedX = (i % 2 === 0 ? 0.008 : -0.008) + (i * 0.002);
+        const yOffset = scrollY * speedY;
+        const xOffset = scrollY * speedX;
+        shape.style.setProperty('--py', `${yOffset}px`);
+        shape.style.setProperty('--px', `${xOffset}px`);
+      });
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
+  }
+
+});
+</script>
+</body>
+</html>
