@@ -2820,6 +2820,211 @@
       .mobile-action-bar { gap: 0.4rem; padding-inline: 0.55rem; }
       .mobile-action-bar a { min-height: 44px; font-size: 0.72rem; }
     }
+
+    /* ============================================================
+       RESPONSIVE HARDENING
+       Keeps every section usable from 320px phones to tablets.
+       ============================================================ */
+    @media (max-width: 1100px) {
+      .services-layout .svc-card:last-child:nth-child(odd),
+      .assurance-grid .assurance-card:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 560px;
+        justify-self: center;
+      }
+    }
+
+    @media (max-width: 1000px) {
+      .navbar { min-height: 64px; }
+      .navbar .container { min-width: 0; }
+      .navbar-brand { font-size: 1.12rem; min-height: 44px; }
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: min(320px, 88vw);
+        height: 100svh;
+        padding: 6rem 1.5rem 2rem;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.25rem;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        background: var(--nb-surface);
+        border-left: 3px solid var(--nb-border);
+        box-shadow: -8px 0 0 var(--nb-border);
+        transition: right 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        z-index: var(--z-sticky);
+      }
+      .nav-links.open { right: 0; }
+      .nav-links li { width: 100%; }
+      .nav-links a {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: 48px;
+        padding: 0.75rem 1rem;
+        font-size: 1rem;
+      }
+      .nav-cta {
+        width: 100%;
+        min-height: 48px;
+        margin: 0.5rem 0 0 !important;
+        justify-content: center;
+        text-align: center;
+      }
+      .hamburger {
+        display: flex;
+        width: 44px;
+        height: 44px;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-label,
+      .hero-kicker {
+        max-width: 100%;
+        white-space: normal;
+        line-height: 1.4;
+      }
+      .hero-kicker { justify-content: center; }
+
+      /* Tablet portrait keeps efficient two-column grids. */
+      .services-layout,
+      .portfolio-grid,
+      .demo-portfolio-grid,
+      .process-steps,
+      .assurance-grid,
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .portfolio-filters {
+        width: 100%;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        padding: 0.25rem 0 0.5rem;
+        scroll-snap-type: none;
+      }
+      .filter-btn {
+        min-height: 44px;
+        flex: 0 1 auto;
+      }
+
+      /* Hover-only portfolio actions become visible on touch screens. */
+      .portfolio-overlay {
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding: 0.75rem;
+        opacity: 1;
+        background: linear-gradient(to top, rgba(26, 26, 26, 0.42), transparent 58%);
+      }
+      .portfolio-overlay-btn { min-height: 44px; }
+
+      .estimate-field label { flex-wrap: wrap; }
+      .channel-card > div { min-width: 0; }
+      .channel-value { overflow-wrap: anywhere; }
+      .modal-close { width: 44px; height: 44px; }
+      .social-btn { width: 44px; height: 44px; }
+      .footer-links { gap: 0.2rem; }
+      .footer-links a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding-block: 0.45rem;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .services-layout,
+      .portfolio-grid,
+      .demo-portfolio-grid,
+      .process-steps,
+      .assurance-grid,
+      .footer-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .services-layout .svc-card:last-child:nth-child(odd),
+      .assurance-grid .assurance-card:last-child:nth-child(odd) {
+        grid-column: auto;
+        max-width: none;
+      }
+      .process-steps { gap: 2.5rem; }
+      .footer-grid { gap: 2.25rem; }
+    }
+
+    @media (max-width: 540px) {
+      .hero-content { padding-inline: var(--container-pad); }
+      .hero-headline { overflow-wrap: anywhere; }
+      .hero-actions .btn { width: 100%; min-height: 50px; }
+      .hero-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+      }
+      .metric {
+        width: auto;
+        padding: 1rem 0.55rem;
+      }
+      .metric-value { font-size: 1.65rem; }
+      .metric-label { font-size: 0.68rem; line-height: 1.4; }
+
+      .portfolio-filters {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.65rem;
+      }
+      .filter-btn {
+        width: 100%;
+        min-width: 0;
+        padding-inline: 0.65rem;
+        white-space: normal;
+      }
+
+      .svc-price {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+      }
+      .feature-pricing span { overflow-wrap: anywhere; }
+      .form-control { min-width: 0; }
+      .modal-overlay {
+        align-items: flex-start;
+        overflow-y: auto;
+        padding-top: max(0.75rem, env(safe-area-inset-top));
+      }
+      .modal-img { max-height: 32svh; }
+      .mobile-action-bar a { line-height: 1.25; padding-inline: 0.35rem; }
+    }
+
+    @media (max-width: 360px) {
+      :root { --container-pad: 0.85rem; }
+      .navbar-brand { font-size: 0.95rem; }
+      .brand-mark { width: 32px; height: 32px; }
+      .hero-kicker { font-size: 0.62rem; padding-inline: 0.65rem; }
+      .hero-headline { font-size: clamp(2.15rem, 12.5vw, 2.75rem); }
+      .section-title { font-size: clamp(1.75rem, 9.5vw, 2.15rem); }
+      .svc-card,
+      .estimator-card,
+      .form-card { padding-inline: 1rem; }
+      .portfolio-body { padding-inline: 1rem; }
+      .feature-pricing { grid-template-columns: 1fr; }
+      .feature-pricing span { font-size: 0.68rem; }
+      .mobile-action-bar { padding-inline: 0.4rem; }
+      .mobile-action-bar a { font-size: 0.68rem; }
+    }
+
+    @media (hover: none) {
+      .svc-card:hover,
+      .portfolio-card:hover,
+      .channel-card:hover,
+      .metric:hover {
+        transform: none;
+      }
+      .portfolio-card:hover .portfolio-img-wrap img { transform: none; }
+    }
   </style>
 </head>
 <body>
@@ -3841,6 +4046,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener('click', (e) => {
       if (!navbar.contains(e.target)) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Buka menu navigasi');
+        document.body.style.overflow = '';
+      }
+    });
+
+    // Prevent a menu opened in portrait mode from locking the page after
+    // rotating or resizing back to the desktop navigation.
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1000 && navLinks.classList.contains('open')) {
         navLinks.classList.remove('open');
         hamburger.classList.remove('active');
         hamburger.setAttribute('aria-expanded', 'false');
