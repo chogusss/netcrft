@@ -1,0 +1,17 @@
+{
+  "name": "NetCrft.id",
+  "short_name": "NetCrft",
+  "description": "Digital agency dan web design studio Indonesia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff8e8",
+  "theme_color": "#b9ff00",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
